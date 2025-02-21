@@ -4,6 +4,7 @@ import { RootState } from '@/store/store';
 import { closeModal } from '@/features/modal/modalSlice';
 import ReactModal from 'react-modal';
 import { useState, useEffect, useRef } from 'react';
+import Image from 'next/image';
 ReactModal.setAppElement('main'); // 確保這行代碼指向你的應用根元素
 
 const Modal: React.FC = () => {
@@ -60,7 +61,7 @@ const Modal: React.FC = () => {
         <div className="w-1/2 mr-4">
           <div className="relative" style={{ height: '400px' }}>
             {images.map((image, index) => (
-              <img 
+              <Image 
                 key={index}
                 src={image} 
                 alt={`圖片 ${index + 1}`} 

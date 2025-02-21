@@ -3,6 +3,7 @@ import { useDispatch, useSelector } from 'react-redux';
 import { ChevronRight } from 'lucide-react';
 import { RootState } from '../../store/store';
 import { setCurrentSlide, nextSlide } from '../../features/carousel/carouselSlice';
+import Image from 'next/image';
 
 const Hero: React.FC = () => {
   const dispatch = useDispatch();
@@ -27,7 +28,7 @@ const Hero: React.FC = () => {
             style={{ opacity: currentSlide === index ? 1 : 0 }}
           >
             <div className="absolute inset-0 bg-black/60"></div>
-            <img src={slide.image} alt="" className="w-full h-full object-cover" />
+            <Image src={slide.image} alt="" className="w-full h-full object-cover" />
           </div>
         ))}
       </div>

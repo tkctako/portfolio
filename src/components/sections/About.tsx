@@ -1,7 +1,7 @@
 import React from 'react';
 import { useSelector } from 'react-redux';
 import { RootState } from '../../store/store';
-
+import Image from 'next/image';
 const About: React.FC = () => {
   const { skills, bio } = useSelector((state: RootState) => state.about);
 
@@ -10,7 +10,7 @@ const About: React.FC = () => {
       <div className="max-w-[1600px] mx-auto px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-20">
           <div className="relative mx-auto overflow-hidden">
-            <img
+            <Image
               src="/images/profile.png"
               alt="Profile"
               className="transition-transform"
