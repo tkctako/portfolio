@@ -43,7 +43,7 @@ const Hero: React.FC = () => {
             擅長時裝穿搭以及歐風背景的日系插畫家。
           </p>
           <a href="#works" className="text-sm tracking-[0.2em] text-gray-300 hover:text-white flex items-center gap-2">
-            VIEW PORTFOLIO
+            VIEW WORKS
             <ChevronRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
           </a>
         </div>

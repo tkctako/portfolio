@@ -30,7 +30,7 @@ const Portfolio: React.FC = () => {
   return (
     <section id="works" className="w-full py-32 bg-zinc-900">
       <div className="max-w-[1600px] mx-auto px-8">
-        <h2 className="text-5xl md:text-7xl font-light mb-20">Portfolio</h2>
+        <h2 className="text-5xl md:text-7xl font-light mb-20">WORKS</h2>
         <h2 className="text-4xl md:text-4xl mb-5">工作紀錄</h2>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 mb-20">        
           {

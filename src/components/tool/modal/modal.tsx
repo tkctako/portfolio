@@ -56,7 +56,7 @@ const Modal: React.FC = () => {
       overlayClassName={styles.modal}
     >
       <span className={styles.close} onClick={() => dispatch(closeModal())}>&times;</span>
-      <h1 className="text-center text-3xl font-bold mb-10 text-white">{project?.description}</h1> 
+      <h1 className="text-center text-2xl md:text-3xl  font-bold mb-10 text-white">{project?.description}</h1> 
       <div className="flex">
         <div className="w-1/2 mr-4">
           <div className="relative" style={{ height: '400px' }}>
@@ -65,7 +65,8 @@ const Modal: React.FC = () => {
                 key={index}
                 src={image} 
                 alt={`圖片 ${index + 1}`} 
-                fill
+                width={800}
+                height={600}
                 className="w-full transition-opacity duration-500"
                 style={{ 
                   position: 'absolute',
@@ -73,8 +74,8 @@ const Modal: React.FC = () => {
                   left: 0,
                   transform: 'translateY(-50%)',
                   opacity: currentSlide === index ? 1 : 0,
-                  maxHeight: '100%',
-                  objectFit: 'contain'
+                  maxHeight: '100%',// 确保图片高度不超过外部 div 的高度
+                  objectFit: 'contain' // 保持图片的宽高比
                 }}
               />
             ))}
