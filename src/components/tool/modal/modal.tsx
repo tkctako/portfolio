@@ -5,6 +5,8 @@ import { closeModal } from '@/features/modal/modalSlice';
 import ReactModal from 'react-modal';
 import { useState, useEffect, useRef } from 'react';
 import Image from 'next/image';
+import { useSwipeable } from 'react-swipeable';
+
 ReactModal.setAppElement('main'); // 確保這行代碼指向你的應用根元素
 
 const Modal: React.FC = () => {
@@ -48,6 +50,12 @@ const Modal: React.FC = () => {
     }, 3000);
   };
 
+  const handlers = useSwipeable({
+    onSwipedLeft: handleNextSlide,
+    onSwipedRight: handlePrevSlide,
+    trackMouse: true
+  });
+
   return (
     <ReactModal
       isOpen={modalId !== 0}
@@ -58,7 +66,7 @@ const Modal: React.FC = () => {
       <span className={styles.close} onClick={() => dispatch(closeModal())}>&times;</span>
       <h1 className="text-center text-2xl md:text-3xl  font-bold mb-10 text-white">{project?.description}</h1> 
       <div className="flex">
-        <div className="w-1/2 mr-4">
+        <div className="w-1/2 mr-4"  {...handlers}>
           <div className="relative" style={{ height: '400px' }}>
             {images.map((image, index) => (
               <Image 
