@@ -4,6 +4,7 @@
   <defs>
     <style>
       .st0 {
+        display: none;
         fill: #fff;
       }
     </style>

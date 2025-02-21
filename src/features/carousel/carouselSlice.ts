@@ -13,17 +13,17 @@ const initialState: CarouselState = {
   currentSlide: 0,
   slides: [
     {
-      image: "/images/frieren.png",
+      image: "/images/frieren.jpg",
       title: "Web Development",
       description: "Creating modern and responsive websites"
     },
     {
-      image: "/images/frieren2.png",
+      image: "/images/frieren2.jpg",
       title: "UI/UX Design",
       description: "Designing intuitive user interfaces"
     },
     {
-      image: "/images/ayase.png",
+      image: "/images/ayase.jpg",
       title: "Brand Design",
       description: "Developing comprehensive brand identities"
     }
