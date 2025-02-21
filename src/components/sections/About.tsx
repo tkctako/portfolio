@@ -14,6 +14,8 @@ const About: React.FC = () => {
               src="/images/profile.png"
               alt="Profile"
               className="transition-transform"
+              width={500}
+              height={600}
             />
             <div className="text-center text-white mt-8">
             <h2 className="text-3xl md:text-3xl font-light mb-12">TKC</h2>

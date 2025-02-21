@@ -28,7 +28,7 @@ const Hero: React.FC = () => {
             style={{ opacity: currentSlide === index ? 1 : 0 }}
           >
             <div className="absolute inset-0 bg-black/60"></div>
-            <Image src={slide.image} alt="" className="w-full h-full object-cover" />
+            <Image src={slide.image} alt="" className="w-full h-full object-cover" fill />
           </div>
         ))}
       </div>
