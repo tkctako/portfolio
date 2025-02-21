@@ -1,0 +1,28 @@
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
+.modalContent {
+  background-color: black;
+  padding: 20px;
+  border-radius: 8px;
+  width: 800px;
+  position: relative;
+  transition: opacity 0.5s ease-in-out;
+}
+.close {
+  cursor: pointer;
+  position: absolute;
+  top: -8px;
+  right: 10px;
+  color: white;
+  font-size: 60px;
+}
